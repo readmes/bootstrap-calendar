@@ -1,16 +1,16 @@
-Bootstrap Calendar
+Bootstrap Calendar ![what-why](https://cs.adelaide.edu.au/~christoph/badges/content-what-why-brightgreen.svg)
 ===
 
 A Full view calendar based on Twitter Bootstrap. Please try the [demo](http://bootstrap-calendar.azurewebsites.net).
 
 ![Bootstrap full calendar](http://serhioromano.s3.amazonaws.com/github/bs-calendar.png)
 
-### Why?
+### Why? ![what-why](https://cs.adelaide.edu.au/~christoph/badges/content-what-why-brightgreen.svg)
 
 Why did I start this project? Well, I believe there are no good full view calendar's out there with native Bootstrap support. In fact I could not find even one. A different UI and UX concept approach is also used.
 
 
-### Features
+### Features ![what-why](https://cs.adelaide.edu.au/~christoph/badges/content-what-why-brightgreen.svg)
 
 - **Reusable** - there is no UI in this calendar. All buttons to switch view or load events are done separately. You will end up with your own uniquie calendar design.
 - **Template based** - all view like **year**, **month**, **week** or **day** are based on templates. You can easily change how it looks or style it or even add new custom view.
@@ -18,9 +18,9 @@ Why did I start this project? Well, I believe there are no good full view calend
 - **AJAX** - It uses AJAX to feed calendar with events. You provide URL and just return by this URL `JSON` list of events.
 - **i18n** - language files are connected separately. You can easily translate the calendar into your own language. Holidays are also diplayed on the calendar according to your language
 
-## How to use
+## How to use ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
-### Install
+### Install ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 You can install it with [bower](http://bower.io/) package manager.
 
@@ -32,7 +32,7 @@ Bower will automatically install all dependencies. Then by running
 
 You will see list of the files you need to include to your document.
 
-### Quick setup
+### Quick setup ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 You will need to include the bootstrap css and calendar css. Here is the minimum setup.
 
 	<!DOCTYPE html>
@@ -74,7 +74,7 @@ Where xx-XX is the language code. When you initializing the calendar, you have t
 
 
 
-## Feed with events
+## Feed with events ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 To feed the calendar with events you should use `events_source` parameter. It may be a function, array or URL. In all cases you have to set it with valid events array.
 
@@ -82,7 +82,7 @@ See [events.json.php](https://github.com/Serhioromano/bootstrap-calendar/blob/ma
 
 `start` and `end` contain dates when event starts (inclusive) and ends (exclusive) in Unix timestamp. Classes are `event-important`, `event-success`, `event-warning`, `event-info`, `event-inverse` and `event-special`. This wil change the color of your event indicators.
 
-### Feed URL
+### Feed URL ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 	var calendar = $('#calendar').calendar({events_source: '/api/events.php'});
 
@@ -103,7 +103,7 @@ It will send two parameters by `GET` named `from` and `to`, which will tell you 
 		]
 	}
 
-### Feed array
+### Feed array ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg) ![references](https://cs.adelaide.edu.au/~christoph/badges/content-references-orange.svg)
 
 You can set events list array directly to `events_source` parameter.
 
@@ -121,7 +121,7 @@ You can set events list array directly to `events_source` parameter.
         ]});
 
 
-### Feed function
+### Feed function ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg) ![references](https://cs.adelaide.edu.au/~christoph/badges/content-references-orange.svg)
 
 Or you can use function. You have to return array of events.
 
@@ -140,7 +140,7 @@ Or you can use function. You have to return array of events.
 	}});
 
 
-### PHP example
+### PHP example ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 Note that `start` and `end` dates are in milliseconds, thus you need to divide it by 1000 to get seconds. PHP example.
 
@@ -200,7 +200,7 @@ exit;
 ?>
 ```
 
-## Usage warning.
+## Usage warning. ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 You cannot use the calendar from a local file. 
 The following error will be displayed :
@@ -208,7 +208,7 @@ Failed to load resource: Origin null is not allowed by Access-Control-Allow-Orig
 
 Using Ajax with local resources (file:///), is not permited. You will need to deploy this to the web instead.
 
-## Modal popup
+## Modal popup ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 You can enable a bootstrap modal popup to show when clicking an event instead of redirecting to event.url. 
 To enable boostrap modal, first add the modal html to your page and provide boostrap-calendar with the ID:
@@ -249,14 +249,14 @@ For Bootstrap v3, use
         </div>
     </div>
 
-### Modal content source
+### Modal content source ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg) ![references](https://cs.adelaide.edu.au/~christoph/badges/content-references-orange.svg)
 
 There are three options for populating the contents of the modal, controlled by the `modal_type` option:
 - **iframe** (default) - populates modal with iframe, iframe.src set to event.url
 - **ajax** - gets html from event.url, this is useful when you just have a snippet of html and want to take advantage of styles in the calendar page
 - **template** - will render a template (example in tmpls/modal.html) that gets the `event` and a reference to the `calendar` object.
 
-### Modal title
+### Modal title ![how](https://cs.adelaide.edu.au/~christoph/badges/content-how-green.svg)
 
 The modal title can be customized by defining the `modal_title` option as a function. This function will receive the event as its only parameter. For example, this could be used to set the title of the modal to the title of the event:
 
